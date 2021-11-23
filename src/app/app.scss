@@ -1,8 +1,13 @@
 // http://ionicframework.com/docs/theming/
 
-ion-content.wrapper{
-    background:rgb(46, 46, 46);
-  }
+.scroll-content {
+  padding: 0px;
+  background: linear-gradient(#0c090d, #2c242e, #3b2b3f)
+}
+
+ion-content.wrapper {
+  width: 100%;
+}
 
 // App Global Sass
 // --------------------------------------------------
@@ -17,3 +22,8 @@ ion-content.wrapper{
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

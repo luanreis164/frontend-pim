@@ -10,24 +10,27 @@
   <br>
 
     <form>
-     <ion-item>
-      <ion-label stacked> Email </ion-label>
-      <ion-input [(ngModel)]="creds.email" name="email" type="text" > </ion-input>
-    </ion-item>
+     <div>
+      <label> Email </label>
+      <input placeholder="Digite seu email" [(ngModel)]="creds.email" name="email" type="text" /> 
+     </div>
     <br>
-     <ion-item>
-        <ion-label stacked> Senha </ion-label>
-        <ion-input [(ngModel)]="creds.senha" name="senha" type="password"> </ion-input>
-     </ion-item>
+     <div>
+        <label > Senha </label>
+        <input placeholder="Digite sua senha" [(ngModel)]="creds.senha" name="senha" type="password"/> 
+     </div>
      
      <br>
 
-     <button ion-button block (click)="login()" > Entrar </button>
+     <div (click)="login()" class="btn">
+      Entrar
+     </div>
        
 
     </form>
 
-    <p>Ainda não tem uma conta?<a href=""target="_blank">Cadastre-se agora!</a></p>
+    <p>Ainda não tem uma conta?</p>
+    <p><a href=""target="_blank">Cadastre-se agora!</a></p>
   
   
 

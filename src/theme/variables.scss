@@ -5,18 +5,16 @@
 // roboto, and noto sans fonts
 $font-path: "../assets/fonts";
 
-
 // The app direction is used to include
 // rtl styles in your app. For more info, please see:
 // http://ionicframework.com/docs/theming/rtl-support/
 $app-direction: ltr;
 
-ion-content.wrapper{
-  background:rgb(46, 46, 46);
+ion-content.wrapper {
+  background: rgb(46, 46, 46);
 }
 
 @import "ionic.globals";
-
 
 // Shared Variables
 // --------------------------------------------------
@@ -24,9 +22,6 @@ ion-content.wrapper{
 // the Sass variables found in Ionic's source scss files.
 // To view all the possible Ionic variables, see:
 // http://ionicframework.com/docs/theming/overriding-ionic-variables/
-
-
-
 
 // Named Color Variables
 // --------------------------------------------------
@@ -37,35 +32,24 @@ ion-content.wrapper{
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
-  secondary:  #32db64,
-  danger:     #f53d3d,
-  light:      #f4f4f4,
-  dark:       #222,
-
+  primary: #488aff,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark: #222,
 );
-
 
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
 
-
-
-
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
-
-
 // App Windows Variables
 // --------------------------------------------------
 // Windows only Sass variables can go here
-
-
-
 
 // App Theme
 // --------------------------------------------------
@@ -76,7 +60,6 @@ $colors: (
 
 @import "ionic.theme.default";
 
-
 // Ionicons
 // --------------------------------------------------
 // The premium icon font for Ionic. For more info, please see:
@@ -84,9 +67,27 @@ $colors: (
 
 @import "ionic.ionicons";
 
-
 // Fonts
 // --------------------------------------------------
 
 @import "roboto";
 @import "noto-sans";
+
+$white: white;
+$black: #0c090d;
+$black-light: #1c1c1c;
+$grey: #414141;
+$golden: #f9c22e;
+$golden-light: #ffe6a1;
+$blue: #53b3cb;
+$blue-light: #7fcde0;
+$blue-dark: #0ea5ca;
+$pink: #e01a4f;
+$pink-light: #e6436e;
+
+/* fonts */
+$light-text-font: "Zen Maru Gothic", "roboto", "arial", "sans-serif";
+$light-text-weight: 400;
+
+/* gradient */
+$std-gradient: linear-gradient(#0c090d, #2c242e, #3b2b3f);
