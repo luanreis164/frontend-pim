@@ -13,7 +13,7 @@ import { CategoriaService } from '../../services/domain/categoria.service';
 
 @IonicPage()
 @Component({
-  selector: 'page-categorias',
+  selector: 'page-categorias', 
   templateUrl: 'categorias.html',
 })
 export class CategoriasPage {
@@ -21,7 +21,7 @@ export class CategoriasPage {
 
   bucketUrl : string = API_CONFIG.bucketBaseUrl;
 
-  items : CategoriaDTO;
+  items : CategoriaDTO; 
 
   constructor(
     public navCtrl: NavController,
@@ -36,11 +36,8 @@ export class CategoriasPage {
     .subscribe( response => {
       this.items = response;
     },
-    error => {
-      console.log(error);
-        }
-    )
-    
+    error => {})
+  
   }
 
 
