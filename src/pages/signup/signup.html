@@ -9,65 +9,75 @@
 
 <ion-content padding>
 
-  <form (ngSubmit)="signupUser(); $event.preventDefault()">
+  <form [formGroup]="formGroup" (ngSubmit)="signupUser(); $event.preventDefault()">
 
     <ion-item>
       <ion-label stacked>Nome*</ion-label>
-      <ion-input name="nome" type="text"></ion-input>
+      <ion-input formControlName="nome" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.nome.dirty && formGroup.controls.nome.errors" magin-left>Valor inválido</p>
     
     <ion-item>
       <ion-label stacked>Email*</ion-label>
-      <ion-input name="email" type="text"></ion-input>
+      <ion-input formControlName="email" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.email.dirty && formGroup.controls.email.errors" magin-left>Valor inválido</p>
 
     <ion-item>
       <ion-label stacked>Senha*</ion-label>
-      <ion-input name="senha" type="password"></ion-input>
+      <ion-input formControlName="senha" type="password"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.senha.dirty && formGroup.controls.senha.errors" magin-left>Valor inválido</p>
     
     <ion-item>
       <ion-label stacked>CPF*</ion-label>
-      <ion-input name="cpf" type="text"></ion-input>
+      <ion-input formControlName="cpf" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.cpf.dirty && formGroup.controls.cpf.errors" magin-left>Valor inválido</p>
     
     <ion-item>
       <ion-label stacked>Rua*</ion-label>
-      <ion-input name="rua" type="text"></ion-input>
+      <ion-input formControlName="rua" type="text"></ion-input>
     </ion-item>
-
+    <p class="danger" *ngIf="formGroup.controls.rua.dirty && formGroup.controls.rua.errors" magin-left>Valor inválido</p>
   
     <ion-item>
       <ion-label stacked>Bairro*</ion-label>
-      <ion-input name="bairro" type="text"></ion-input>
+      <ion-input formControlName="bairro" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.bairro.dirty && formGroup.controls.bairro.errors" magin-left>Valor inválido</p>
     
     <ion-item>
       <ion-label stacked>Cidade*</ion-label>
-      <ion-input name="cidade" type="text"></ion-input>
+      <ion-input formControlName="cidade" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.cidade.dirty && formGroup.controls.cidade.errors" magin-left>Valor inválido</p>
 
     <ion-item>
       <ion-label stacked>Estado*</ion-label>
-      <ion-input name="estado" type="text"></ion-input>
+      <ion-input formControlName="estado" type="text"></ion-input>
     </ion-item>
-
+    <p class="danger" *ngIf="formGroup.controls.estado.dirty && formGroup.controls.estado.errors" magin-left>Valor inválido</p>
+  
     <ion-item>
       <ion-label stacked>Telefone*</ion-label>
-      <ion-input name="telefone" type="text"></ion-input>
+      <ion-input formControlName="telefone" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.telefone.dirty && formGroup.controls.telefone.errors" magin-left>Valor inválido</p>
     
     <ion-item>
       <ion-label stacked>RG*</ion-label>
-      <ion-input name="rg" type="text"></ion-input>
+      <ion-input formControlName="rg" type="text"></ion-input>
     </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.rg.dirty && formGroup.controls.rg.errors" magin-left>Valor inválido</p>
 
     <ion-item>
       <ion-label stacked>Data de Nascimento*</ion-label>
-      <ion-input name="dataNasc" type="text"  mask="9999-99-99" mask-placeholder="-"></ion-input>
+      <ion-datetime value="1990-02-20" displayFormat="DD-MM-YYYY" placeholder="Select Date" formControlName="dataNasc"></ion-datetime>
     </ion-item>
-
-    <button ion-button bçpcl type="submit">Criar conta</button>
+    <p class="danger"*ngIf="formGroup.controls.dataNasc.dirty && formGroup.controls.dataNasc.errors" magin-left>Valor inválido</p>
+    
+    <button ion-button block type="submit">Criar conta</button>
   </form>
 
 

@@ -40,5 +40,8 @@ export class CategoriasPage {
   
   }
 
+  showQuartos(){ 
+    this.navCtrl.push('QuartosPage');
+  }
 
 }

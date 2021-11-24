@@ -12,12 +12,13 @@
 
 <ion-content padding>
   <ion-list>
-    <button ion-item *ngFor="let item of items">
+    <button ion-item *ngFor="let item of items" (click)='showQuartos()'>
       <ion-thumbnail item-start>
         <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
       </ion-thumbnail>
-      <h1>{{ item.nome }} - </h1>
-      <h2>{{ item.descricao }}</h2>
+      <h2>{{ item.nome }} - </h2>
+      <h3>{{ item.descricao }} - </h3>
+      <h3> Diaria:R{{ item.precoDiaria | currency }}</h3>
 
      </button>  
   </ion-list>

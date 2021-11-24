@@ -38,7 +38,7 @@ import { AuthInterpectorProvider } from '../interceptors/auth-interceptor';
     ErrorInterpectorProvider,
     AuthService,
     StorageService,
-    ClienteService
+    ClienteService,
   ]
 })
 export class AppModule {}

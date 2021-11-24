@@ -1,0 +1,23 @@
+
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Quartos</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of items">
+
+      <ion-thumbnail item-start>
+        <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
+      </ion-thumbnail>
+
+      <h2>Numero do quarto: {{ item.numero }} - </h2>
+      <h3>Andar: {{ item.andar }}  </h3>
+
+    </button>
+  </ion-list>
+</ion-content>
