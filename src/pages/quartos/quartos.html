@@ -12,11 +12,11 @@
     <button ion-item *ngFor="let item of items">
 
       <ion-thumbnail item-start>
-        <img src="{{bucketUrl}}/cat{{item.id}}.jpg">
+        <img src="{{bucketUrl}}/cat{{item.categoria}}.jpg">
       </ion-thumbnail>
 
-      <h2>Numero do quarto: {{ item.numero }} - </h2>
-      <h3>Andar: {{ item.andar }}  </h3>
+      <h2>Apartamento Nº: {{ item.numero }} -  {{ item.andar }}º Andar </h2>
+      
 
     </button>
   </ion-list>

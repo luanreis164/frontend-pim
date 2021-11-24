@@ -40,8 +40,8 @@ export class CategoriasPage {
   
   }
 
-  showQuartos(){ 
-    this.navCtrl.push('QuartosPage');
+  showQuartos(categoria_id: number){ 
+    this.navCtrl.push('QuartosPage',{categoria_id: categoria_id});
   }
 
 }

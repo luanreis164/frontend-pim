@@ -1,7 +1,7 @@
 export interface QuartoDTO {
-    id: string;
-    numero: string;
-    andar: string;
+    id: number;
+    numero: number;
+    andar: number;
 
 
 

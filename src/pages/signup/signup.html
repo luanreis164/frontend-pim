@@ -48,6 +48,18 @@
     <p class="danger" *ngIf="formGroup.controls.bairro.dirty && formGroup.controls.bairro.errors" magin-left>Valor inválido</p>
     
     <ion-item>
+      <ion-label stacked>Numero*</ion-label>
+      <ion-input formControlName="numero" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.numero.dirty && formGroup.controls.numero.errors" magin-left>Valor inválido</p>
+    
+    <ion-item>
+      <ion-label stacked>CEP*</ion-label>
+      <ion-input formControlName="cep" type="text"></ion-input>
+    </ion-item>
+    <p class="danger" *ngIf="formGroup.controls.cep.dirty && formGroup.controls.cep.errors" magin-left>Valor inválido</p>
+    
+    <ion-item>
       <ion-label stacked>Cidade*</ion-label>
       <ion-input formControlName="cidade" type="text"></ion-input>
     </ion-item>
