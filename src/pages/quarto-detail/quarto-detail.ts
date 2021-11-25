@@ -1,20 +1,17 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { API_CONFIG } from '../../config/api.config';
-import { CategoriaDTO } from '../../models/categoria.dto';
 import { QuartoDTO } from '../../models/quarto.dto';
 import { QuartoService } from '../../services/domain/quarto.service';
 
-
 @IonicPage()
 @Component({
-  selector: 'page-quartos',
-  templateUrl: 'quartos.html',
+  selector: 'page-quarto-detail',
+  templateUrl: 'quarto-detail.html',
 })
-export class QuartosPage {
-
-  items: QuartoDTO[];
-  items2: CategoriaDTO[];
+export class QuartoDetailPage {
+  
+  item: QuartoDTO;
 
   bucketUrl : string = API_CONFIG.bucketBaseUrl;
 
@@ -27,17 +24,13 @@ export class QuartosPage {
 
   ionViewDidLoad() {
     let categoria_id = this.navParams.get('categoria_id');
-    this.quartoService.findByCategoria(categoria_id)
+    this.quartoService.findById(categoria_id)
     .subscribe(response =>{
-      this.items = response['content']; 
-  
+      this.item = response;
     },
     error => {});
-
   }
 
-  showDetail(categoria_id : number){
-    this.navCtrl.push('QuartoDetailPage',{categoria_id: categoria_id});
-  }
+
 
 }

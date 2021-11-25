@@ -16,7 +16,9 @@ constructor(public http: HttpClient){
     }
 
 
-
+    findById(categoria_id: number){
+        return this.http.get<QuartoDTO>(`${API_CONFIG.baseUrl}/quartos/${categoria_id}`);
+    }
 
 
 }
