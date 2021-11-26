@@ -1,5 +1,5 @@
 export const API_CONFIG = {
-    baseUrl: "http://localhost:8080",
+    baseUrl: "https://backend-pim.herokuapp.com",
     bucketBaseUrl: "https://pim-unip-resort.s3.sa-east-1.amazonaws.com"
 
 }

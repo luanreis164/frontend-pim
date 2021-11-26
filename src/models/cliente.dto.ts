@@ -4,7 +4,7 @@ export interface ClienteDTO {
     id: string;
     nome: string;
     email: string;
-    senha: string;
+    senha?: string;
     cpf:string;
     rua: string;
     bairro : string;

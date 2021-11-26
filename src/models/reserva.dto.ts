@@ -1,4 +1,6 @@
-import { RefDTO } from "./ref.dto";
+import { ClienteDTO } from "./cliente.dto";
+import { PagamentoDTO } from "./pagamento.dto";
+import { QuartoDTO } from "./quarto.dto";
 
 export interface ReservaDTO{
 
@@ -7,9 +9,9 @@ export interface ReservaDTO{
     dataSaida: string;
     tempoEstadia: number;
     valor: number;
-    cliente: RefDTO;
-    pagamento: RefDTO;
-    quarto: RefDTO;
+    cliente: ClienteDTO;
+    pagamento: PagamentoDTO;
+    quarto: QuartoDTO;
 
 
 

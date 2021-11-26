@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { API_CONFIG } from '../../config/api.config';
 import { QuartoDTO } from '../../models/quarto.dto';
+import { ReservaDTO } from '../../models/reserva.dto';
 import { QuartoService } from '../../services/domain/quarto.service';
+import { ReservaService } from '../../services/domain/reserva.service';
 
 @IonicPage()
 @Component({
@@ -19,6 +21,7 @@ export class QuartoDetailPage {
     public navCtrl: NavController,
      public navParams: NavParams,
      public quartoService: QuartoService,
+  
      ) {
   }
 
@@ -30,7 +33,6 @@ export class QuartoDetailPage {
     },
     error => {});
   }
-
 
 
 }

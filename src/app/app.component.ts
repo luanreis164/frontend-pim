@@ -27,6 +27,7 @@ export class MyApp {
     this.pages = [
       { title: 'Meus dados', component: 'ProfilePage' },
       { title: 'Categorias', component: 'CategoriasPage' },
+      {title:'Reservar quarto', component:'ReservasPage'},
       {title: 'Logout', component: ''}
 
     ];

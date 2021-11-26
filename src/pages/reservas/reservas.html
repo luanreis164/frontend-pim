@@ -1,0 +1,20 @@
+
+<ion-header>
+  <ion-navbar>
+    <ion-title>Reservas</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form [formGroup]="formGroup" (ngSubmit)="reserva(); $event.preventDefault()">
+
+    <ion-item>
+      <ion-label stacked>Data de Entrada*</ion-label>
+      <ion-datetime value="22-02-2021" displayFormat="DD-MM-YYYY" placeholder="Select Date" formControlName="dataReserva"></ion-datetime>
+    </ion-item>
+    <p class="danger"*ngIf="formGroup.controls.dataReserva.dirty && formGroup.controls.dataReserva.errors" magin-left>Valor inválido</p>
+    
+  
+    
+  </form>
